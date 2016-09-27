@@ -21,9 +21,9 @@
 
 app_icon "./AppIcon.png"
 username "hth321@gmail.com" # your Apple ID user
-name({
-  "en-US" => "Handsome Arabian Uncle Animated"
-})
+# name({
+#   "en-US" => "Handsome Arabian Uncle Animated"
+# })
 
 # changelog({
 #   "en-US" => "iPhone 6 (Plus) Support" 
