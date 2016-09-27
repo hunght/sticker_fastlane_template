@@ -58,5 +58,5 @@ secondary_category "MZGenre.Entertainment"
 
 app_rating_config_path "./fastlane/ratings.json"
 
-price_tier 5
+price_tier 1
 
