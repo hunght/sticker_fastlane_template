@@ -1,6 +1,12 @@
 #!/bin/sh
+
 if [ -z "$1" ]; then
-sed -i -e 's/{Appname}/"${file_name//_/ }"/g' ./fastlane/metadata/en-US/description.txt
+echo "Pls enter file name";
+exit;
+fi
+
+if [ -z "$2" ]; then
+echo "Pls enter id of line store";
 exit;
 fi
 
@@ -25,6 +31,7 @@ rm file.zip;
 
 find . -name "*key*" -exec rm -rf {} \;
 find . -name "*tab_*" -exec rm -rf {} \;
+find . -name "productInfo.meta" -exec rm -rf {} \;
 cd ..;
 
 else
@@ -45,10 +52,10 @@ rm $f;
 done
 
 fi
-
 file_name="$1";
+file_name="${file_name//_/ }";
 
-echo '{"name":"'"${file_name//_/ }"'",\n"website": "https://twitter.com/hunght"}' > info.json
+echo '{"name":"'"$file_name"'",\n"website": "https://twitter.com/hunght"}' > info.json
 
 
 curl -LOk https://github.com/hunght/sticker_fastlane_template/archive/master.zip;
@@ -56,9 +63,21 @@ unzip master.zip  -d ./;
 mv -f ./sticker_fastlane_template-master ./fastlane
 rm master.zip;
 
-sed -i -e 's/{Appname}/"${file_name//_/ }"/g' ./fastlane/metadata/en-US/description.txt
+echo $PWD
+sed -i -e 's/{Appname}/'"$file_name"'/g' ./fastlane/metadata/en-US/description.txt
 
+numfiles=(./stickers/*.gif)
+numfiles=${#numfiles[@]}
+if [ "$numfiles" -gt 1 ]; then
+    numfiles=${#numfiles[@]}' animated (GIF)'
+else
+    numfiles=(./stickers/*.png)
+    numfiles=${#numfiles[@]}
+fi
+echo "$numfiles"
 
-open ./info.json
+sed -i -e 's/{numberOfStickers}/'"$numfiles"'/g' ./fastlane/metadata/en-US/description.txt
+
 open ./
+open ./fastlane/metadata/en-US/description.txt
 
