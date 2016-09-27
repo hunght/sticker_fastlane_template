@@ -19,7 +19,7 @@
 # screenshots_path "./screenshots"
 
 
-app_icon "./fastlane/AppIcon.png"
+app_icon "./AppIcon.png"
 username "hth321@gmail.com" # your Apple ID user
 name({
   "en-US" => "Handsome Arabian Uncle Animated"
