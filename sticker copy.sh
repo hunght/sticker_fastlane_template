@@ -1,4 +1,8 @@
 #!/bin/sh
+if [ -z "$1" ]; then
+sed -i -e 's/{Appname}/"${file_name//_/ }"/g' ./fastlane/metadata/en-US/description.txt
+exit;
+fi
 
 if [ ! -d "$1" ]; then
     # Control will enter here if $DIRECTORY exists.
@@ -52,5 +56,9 @@ unzip master.zip  -d ./;
 mv -f ./sticker_fastlane_template-master ./fastlane
 rm master.zip;
 
+sed -i -e 's/{Appname}/"${file_name//_/ }"/g' ./fastlane/metadata/en-US/description.txt
+
+
 open ./info.json
 open ./
+

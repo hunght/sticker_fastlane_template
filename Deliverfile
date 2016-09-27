@@ -29,10 +29,6 @@ name({
 #   "en-US" => "iPhone 6 (Plus) Support" 
 # })
 
-description({
-  'en-US' => " A sense of humor makes a man handsome. You can use this stickers and makes you more handsome with Arabian style."
-})
-
 keywords({
   'en-US' => "Arabian,man,uncle,middle,east,gif,animated,animation,cartoon,fun,funny,emo,emoj,sticker,new,hot"
 })
