@@ -1,7 +1,9 @@
 #!/bin/sh
 
 if [ -z "$1" ]; then
-echo "Pls enter file name";
+echo "Create app"
+echo $PWD
+ruby /Users/hunghoang/imsticker/lib/imsticker.rb;
 exit;
 fi
 
