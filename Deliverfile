@@ -22,7 +22,7 @@
 app_icon "./AppIcon.png"
 username "hth321@gmail.com" # your Apple ID user
 # name({
-#   "en-US" => "Handsome Arabian Uncle Animated"
+#   "en-US" => "{Appname}"
 # })
 
 # changelog({
@@ -30,7 +30,7 @@ username "hth321@gmail.com" # your Apple ID user
 # })
 
 keywords({
-  'en-US' => ",gif,animated,cartoon,fun,funny,emo,emoj,sticker,new,hot"
+  'en-US' => "{Appname},gif,animated,cartoon,fun,funny,emo,emoj,sticker,new,hot"
 })
 
 copyright "HeroCrazy"

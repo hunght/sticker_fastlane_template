@@ -19,9 +19,9 @@ before_all do
   # snapshot
 end
 
-lane:production do
+lane:name do
     produce(
-        app_name: 'Arabian_Uncle',
+        app_name: '{Appname}',
         language: 'English',
         app_version: '1.0',
     )
@@ -31,6 +31,23 @@ end
     # match(type: "appstore")
     # snapshot
     # 4
+    cert
+    # 5
+    sigh(force: true)
+    gym(scheme: "StickerPackExtension") # Build your app - more options available
+    deliver(force: true)
+    # frameit
+  end
+
+  lane :prodution do
+    # match(type: "appstore")
+    # snapshot
+    # 4
+      produce(
+        app_name: '{Appname}',
+        language: 'English',
+        app_version: '1.0',
+    )
     cert
     # 5
     sigh(force: true)
