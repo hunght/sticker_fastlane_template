@@ -39,7 +39,7 @@ end
     # frameit
   end
 
-  lane :prodution do
+  lane :production do
     # match(type: "appstore")
     # snapshot
     # 4
