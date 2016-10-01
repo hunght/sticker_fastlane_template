@@ -33,7 +33,7 @@ keywords({
   'en-US' => "{Appname},gif,animated,cartoon,fun,funny,emo,emoj,sticker,new,hot"
 })
 
-copyright "HeroCrazy"
+copyright “The Sticker Studio”
 
 automatic_release true
 
