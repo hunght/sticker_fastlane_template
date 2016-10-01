@@ -30,7 +30,7 @@ username "hth321@gmail.com" # your Apple ID user
 # })
 
 keywords({
-  'en-US' => "Arabian,man,uncle,middle,east,gif,animated,animation,cartoon,fun,funny,emo,emoj,sticker,new,hot"
+  'en-US' => ",gif,animated,cartoon,fun,funny,emo,emoj,sticker,new,hot"
 })
 
 copyright "HeroCrazy"

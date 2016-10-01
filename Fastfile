@@ -21,7 +21,7 @@ end
 
 lane:production do
     produce(
-        app_name: 'Handsome Arabian Uncle Animated',
+        app_name: 'Arabian_Uncle',
         language: 'English',
         app_version: '1.0',
     )
